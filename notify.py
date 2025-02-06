@@ -7,24 +7,29 @@ from dotenv import load_dotenv
 # Carica le variabili d'ambiente
 load_dotenv()
 
+# leggi le credenziali per le API di Telegram e l'accesso ai database
+bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+bot = telepot.Bot(os.getenv("TELEGRAM_BOT_TOKEN"))
+
+connessione_utenti = {
+    'host': os.getenv("DB_HOST"),
+    'user': os.getenv("DB_USER"),
+    'password': os.getenv("DB_PASSWORD"),
+    'database': os.getenv("DB_NAME_UTENTI")
+}
+
+connessione_zone = {
+    'host': os.getenv("DB_HOST"),
+    'user': os.getenv("DB_USER"),
+    'password': os.getenv("DB_PASSWORD"),
+    'database': os.getenv("DB_NAME_ZONE")
+}
+
 # Impostazione del livello di debug
 logging.basicConfig(level=logging.INFO)
 
 # log - inizio codice
 logging.info("Inizio dell'esecuzione del codice")
-
-# Inizializza il bot con il token sicuro
-bot = telepot.Bot(os.getenv("TELEGRAM_BOT_TOKEN"))
-
-# Dati del database
-db_config = {
-    "host": os.getenv("DB_HOST"),
-    "user": os.getenv("DB_USER"),
-    "passwd": os.getenv("DB_PASSWORD"),
-}
-
-db_utenti = os.getenv("DB_UTENTI")
-db_seta = os.getenv("DB_SETA")
 
 # log - database degli utenti
 logging.info("Connessione al database degli utenti")
@@ -44,7 +49,7 @@ if not utenti:
     database_utenti.close()
     logging.info("Nessun utente registrato")
 else:
-    logging.info("Connessione al database delle raccolte SETA")
+    logging.info("Connessione al database delle zone")
     
     # Connessione al database delle zone
     database_zone = MySQLdb.connect(db=db_seta, **db_config)
