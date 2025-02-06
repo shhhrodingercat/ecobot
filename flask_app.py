@@ -11,7 +11,7 @@ load_dotenv()
 secret = os.getenv("WEBHOOK_SECRET")
 base_url = os.getenv("WEBHOOK_URL")
 bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
-bot = telepot.Bot(bot_token)
+bot = telepot.Bot(os.getenv("TELEGRAM_BOT_TOKEN"))
 
 webhook_url = f"{base_url}/{secret}"
 bot.setWebhook(webhook_url, max_connections=1)
