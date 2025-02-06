@@ -9,7 +9,7 @@ load_dotenv()
 
 # leggi le credenziali per le API di Telegram e l'accesso ai database
 bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
-bot = telepot.Bot(os.getenv("TELEGRAM_BOT_TOKEN"))
+bot = telepot.Bot(bot_token)
 
 connessione_utenti = {
     'host': os.getenv("DB_UTENTI_HOST),
