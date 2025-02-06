@@ -12,17 +12,17 @@ bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
 bot = telepot.Bot(os.getenv("TELEGRAM_BOT_TOKEN"))
 
 connessione_utenti = {
-    'host': os.getenv("DB_HOST"),
-    'user': os.getenv("DB_USER"),
-    'password': os.getenv("DB_PASSWORD"),
-    'database': os.getenv("DB_NAME_UTENTI")
+    'host': os.getenv("DB_UTENTI_HOST),
+    'user': os.getenv("DB_UTENTI_USER"),
+    'password': os.getenv("DB_UTENTI_PASSWORD"),
+    'database': os.getenv("DB_UTENTI_NAME")
 }
 
 connessione_zone = {
-    'host': os.getenv("DB_HOST"),
-    'user': os.getenv("DB_USER"),
-    'password': os.getenv("DB_PASSWORD"),
-    'database': os.getenv("DB_NAME_ZONE")
+    'host': os.getenv("DB_ZONE_HOST"),
+    'user': os.getenv("DB_ZONE_USER"),
+    'password': os.getenv("DB_ZONE_PASSWORD"),
+    'database': os.getenv("DB_ZONE_NAME")
 }
 
 # Impostazione del livello di debug
