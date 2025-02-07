@@ -1,3 +1,6 @@
+# Questo software è rilasciato sotto la Licenza Pubblica Generica GNU v3 (GPL v3)
+# Per maggiori informazioni, vedere il file LICENSE o https://www.gnu.org/licenses/gpl-3.0.html
+
 from flask import Flask, request
 import telepot
 from telepot.namedtuple import InlineKeyboardButton, InlineKeyboardMarkup
