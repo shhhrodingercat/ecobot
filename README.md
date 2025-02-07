@@ -26,6 +26,7 @@ Per ottenere le credenziali necessarie, segui questi passaggi:
 ## 3. Struttura del Bot
 
 ### Logica del Bot
+Il core del chatbot è contenuto nel file `flask_app.py`, che gestisce l'interazione con l'utente, riceve i messaggi tramite webhook e aggiorna il database utenti in base ai comandi ricevuti.
 Il core del chatbot è principalmente responsabile della gestione degli utenti e della popolazione del database dinamico. Il bot gestisce le interazioni con gli utenti, raccogliendo i comuni di interesse e memorizzandoli nel database utenti. Tuttavia, la vera azione di notifica avviene tramite uno script separato (`notify.py`), che esegue controlli giornalieri e invia promemoria agli utenti.
 
 ### Webhook e Secret
@@ -57,6 +58,9 @@ Ogni giorno viene eseguito uno script (probabilmente tramite un cron job) che:
 - Determina chi deve essere notificato e invia il messaggio di promemoria alle **18:30**, ricordando agli utenti di mettere i bidoni sulla strada il giorno precedente.
 
 ### Script di Estrazione (`estrattore.py`)
+Lo script `estrattore.py` deve essere utilizzato rinominando i file PDF degli ecocalendari con il codice indicato nel file `codici_comuni.txt` presente nella repository. Una volta rinominati correttamente i file, lo script può essere eseguito per estrarre automaticamente i dati e inserirli in un foglio Excel.
+
+
 Lo script `estrattore.py` analizza i file PDF dell'Ecocalendario di Seta S.p.a. ed estrae le informazioni sui ritiri della raccolta differenziata, trasformandole in un file Excel. Il processo prevede:
 - L'analisi dei PDF per identificare i bollini colorati associati ai tipi di rifiuti.
 - La conversione dei colori in valori booleani per ciascun giorno dell'anno.
@@ -65,7 +69,7 @@ Lo script `estrattore.py` analizza i file PDF dell'Ecocalendario di Seta S.p.a. 
 L'inserimento in un foglio di calcolo serve a controllare manualmente la correttezza dei dati estratti. Successivamente, un altro script viene utilizzato per trasferire questi dati nel database MySQL. Questo passaggio non è incluso nella repository, poiché il metodo di importazione può variare a seconda delle esigenze e delle preferenze dell'utente.
 
 ## 4. Prova il Bot
-Il bot è disponibile su Telegram e può essere provato qui: [DifferenziaBot](https://t.me/differenziabot).
+Il bot è disponibile su Telegram e può essere provato qui: [EcoBot](https://t.me/differenziabot).
 
 ## 5. Disclaimer
 Questo bot è un progetto personale e non è affiliato ufficialmente con nessun ente locale o azienda responsabile della raccolta differenziata. I dati forniti possono variare rispetto alle informazioni ufficiali, quindi si consiglia di verificarli con il proprio comune di residenza. L'autore non si assume alcuna responsabilità per errori o informazioni non aggiornate.
