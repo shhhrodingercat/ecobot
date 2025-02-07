@@ -1,5 +1,3 @@
-# ecobot
-Il bot di Telegram per la gestione della raccolta differenziata nei Comuni in Provincia di Torino serviti da Seta S.p.a
 # Configurazione dell'Architettura per il Bot Telegram
 
 ## Introduzione
@@ -58,6 +56,17 @@ Ogni giorno viene eseguito uno script (probabilmente tramite un cron job) che:
 - Confronta queste informazioni con le zone di interesse degli utenti presenti nel database degli utenti.
 - Determina chi deve essere notificato e invia il messaggio di promemoria alle **18:30**, ricordando agli utenti di mettere i bidoni sulla strada il giorno precedente.
 
-## 4. Disclaimer
+### Script di Estrazione (`estrattore.py`)
+Lo script `estrattore.py` analizza i file PDF dell'Ecocalendario di Seta S.p.a. ed estrae le informazioni sui ritiri della raccolta differenziata, trasformandole in un file Excel. Il processo prevede:
+- L'analisi dei PDF per identificare i bollini colorati associati ai tipi di rifiuti.
+- La conversione dei colori in valori booleani per ciascun giorno dell'anno.
+- La generazione di un foglio Excel con le informazioni strutturate per ogni comune o zona.
+
+L'inserimento in un foglio di calcolo serve a controllare manualmente la correttezza dei dati estratti. Successivamente, un altro script viene utilizzato per trasferire questi dati nel database MySQL. Questo passaggio non è incluso nella repository, poiché il metodo di importazione può variare a seconda delle esigenze e delle preferenze dell'utente.
+
+## 4. Prova il Bot
+Il bot è disponibile su Telegram e può essere provato qui: [DifferenziaBot](https://t.me/differenziabot).
+
+## 5. Disclaimer
 Questo bot è un progetto personale e non è affiliato ufficialmente con nessun ente locale o azienda responsabile della raccolta differenziata. I dati forniti possono variare rispetto alle informazioni ufficiali, quindi si consiglia di verificarli con il proprio comune di residenza. L'autore non si assume alcuna responsabilità per errori o informazioni non aggiornate.
 
