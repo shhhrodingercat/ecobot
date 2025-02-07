@@ -1,0 +1,62 @@
+x001 - Borgaro - Zona A
+x002 - Borgaro - Zona B
+x005 - Brandizzo - Zona 1
+x006 - Brandizzo - Zona 2
+x007 - Brandizzo - Zona 3
+x008 - Brozolo
+x064 - Brusasco
+x009 - Casalborgone
+x010 - Caselle - Zona 1
+x011 - Caselle - Zona 2
+x012 - Caselle - Zona 3
+x013 - Caselle - Zona 4
+x014 - Caselle - Zona 5
+x015 - Castagneto Po
+x016 - Castiglione - Zona 1
+x017 - Castiglione - Zona 2
+x018 - Cavagnolo
+x019 - Chivasso - Zona 1
+x020 - Chivasso - Zona 2
+x021 - Chivasso - Zona 3
+x022 - Chivasso - Zona 4
+x023 - Chivasso - Zona 5
+x024 - Chivasso - Zona 6
+x025 - Cinzano
+x026 - Foglizzo
+x027 - Gassino - Zona 3
+x028 - Gassino - Zona 4
+x029 - Gassino - Zona 4 BIS
+x030 - Lauriano
+x031 - Leini - Zona 1 
+x032 - Leini - Zona 2
+x033 - Leini - Zona 3
+x034 - Leini - Zona 4 
+x035 - Leini - Zona 5 
+x036 - Leini - Zona 6 
+x037 - Lombardore
+x038 - Mappano
+x039 - Montanaro - Zona 1
+x040 - Montanaro - Zona 2
+x041 - Monteu da Po
+x042 - Rivalba
+x043 - Rondissone
+x044 - San Benigno - Zona Nord
+x045 - San Benigno - Zona Sud
+x046 - San Mauro - Zona Capoluogo
+x047 - San Mauro - Zona Oltrepo
+x048 - San Raffaele Cimena
+x049 - San Sebastiano da Po
+x050 - Sciolze
+x051 - Settimo - Zona 1
+x052 - Settimo - Zona 2
+x053 - Settimo - Zona 3
+x054 - Settimo - Zona 4
+x055 - Settimo - Zona 5
+x056 - Settimo - Zona 6
+x057 - Torrazza Piemonte
+x058 - Verolengo - Zona 1
+x059 - Verolengo - Zona 2
+x060 - Verrua Savoia
+x061 - Volpiano - Zona Centro
+x062 - Volpiano - Zona Est
+x063 - Volpiano - Zona Ovest
