@@ -15,7 +15,7 @@ Prima di avviare il bot, assicurati di avere:
 - **Telepot** per interagire con l'API di Telegram
 - **MySQL** come database
 - **Un server accessibile via HTTPS** per ricevere gli aggiornamenti da Telegram
-- **Un file `.env`** per le credenziali
+- **Un file `credentials.env`** per le credenziali
 
 ## 2. Acquisizione dell'API di Telegram
 Per ottenere le credenziali necessarie, segui questi passaggi:
