@@ -52,7 +52,7 @@ Il database delle zone è basato sui dati estratti dagli ecocalendari di Seta S.
 - `s` = Sfalci
 
 ### Script Giornaliero (`notify.py`)
-Ogni giorno viene eseguito uno script (probabilmente tramite un cron job) che:
+Ogni giorno viene eseguito uno script (impostabile tramite cron job) che:
 - Recupera i dati dal database statico per identificare quali rifiuti vengono raccolti in quel determinato giorno.
 - Confronta queste informazioni con le zone di interesse degli utenti presenti nel database degli utenti.
 - Determina chi deve essere notificato e invia il messaggio di promemoria alle **18:30**, ricordando agli utenti di mettere i bidoni sulla strada il giorno precedente.
