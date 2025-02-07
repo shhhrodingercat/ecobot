@@ -41,7 +41,7 @@ bot.setWebhook(webhook_url, max_connections=1)
 Una tabella che contiene le informazioni sugli utenti, inclusi i comuni (fino a 6 per utente) per cui desiderano ricevere notifiche. Questo database è dinamico, poiché gli utenti possono iscriversi o disiscriversi in qualsiasi momento. Il database contiene un'unica tabella dove a ogni riga corrisponde un utente del bot. Le colonne disponibili sono il boolean delle notifiche e le 6 colonne disponibili per registrare le proprie zone.
 
 ### Database Raccolte
-Un database statico che memorizza i giorni di raccolta differenziata per tutti i 63 comuni. Dal momento che i dati sono fiss vanno aggiornati solo in caso di variazioni nel calendario comunale.
+Un database statico che memorizza i giorni di raccolta differenziata per tutti i 63 comuni. Dal momento che i dati sono fissi vanno aggiornati solo in caso di variazioni nel calendario comunale.
 
 Il database delle zone è basato sui dati estratti dagli ecocalendari di Seta S.p.a., recuperabili qui: [Seta S.p.a.](https://www.setaspa.com/comuni). All'interno della repository esiste uno script `estrattore.py` per estrarre automaticamente tutti i dati e inserirli in un foglio Excel. Il database deve essere strutturato con una tabella per ogni comune o zona per comune, alla quale corrisponde un codice univoco (consultare l'allegato `codici_comuni.txt` per sapere la corrispondenza). Ogni tabella ha una riga per giorno dell'anno in cui è associato un boolean in caso di ritiro di quel rifiuto:
 - `i` = Indifferenziato
